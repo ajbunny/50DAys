@@ -1,0 +1,75 @@
+ @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap'); 
+
+:root {
+    background-color: rgb(105, 163, 186);
+    font-family: 'Monoton', cursive;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 50vw;
+    /* flex-direction: column; //will stack the photos on top of eachother  */
+}
+
+h1{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: left;
+    font-weight: 550;
+    padding: 20px;
+    margin: 0 20px;
+}
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: rgb(221, 215, 195);
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+    font-size: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+
+}
+
+.panel.active {
+  flex: 20;
+
+}
+
+.panel.active h3 {
+    opacity:1 ;
+    transition: opactity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
