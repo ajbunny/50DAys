@@ -1,75 +1,109 @@
- @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap'); 
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Monoton&family=Shadows+Into+Light&display=swap");
 
 :root {
-    background-color: rgb(105, 163, 186);
-    font-family: 'Monoton', cursive;
+  /* background-color: rgb(105, 163, 186); */
+  font-family: "Amatic SC", cursive;
+  font-family: "Monoton", cursive;
+  font-family: "Shadows Into Light", cursive;
+  background-image: url(https://media1.giphy.com/media/3og0INtldac8gncQO4/giphy.gif?cid=ecf05e47ey0wk4iw36n0nt185g5ni36cs1gp7bjzsvoorac8&rid=giphy.gif&ct=g);
+  background-size: 100%;
+  color: aliceblue;
+ 
+
+}
+
+
+#nav ul  {
+  display: flex;
+  flex-direction: row;
+  list-style:none;
+  justify-content:space-evenly;
+  font-size: x-large;
+    
+}
+ #nav ul a {
+  color:aliceblue
+ }
+
+.mainContainer.show-nav {
+  transform: rotate(-375deg);
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+
+}
+.mainContainer {
+  display: block;
+   align-items: center;
+  /*justify-items: center; */
+  width: 100vw;
+  height: 90vh;
 }
 
 .container {
-    display: flex;
-    width: 50vw;
-    /* flex-direction: column; //will stack the photos on top of eachother  */
+  display: flex;
+  width: 50vw;
+  height: 100vh;
+  /* flex-direction: column; //will stack the photos on top of eachother  */
 }
 
-h1{
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content: left;
-    font-weight: 550;
-    padding: 20px;
-    margin: 0 20px;
+h1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: left;
+  font-size: 3em;
+  font-weight: 550;
+  padding: 20px;
+  margin: 0 20px;
 }
 .panel {
-    background-size: auto 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 80vh;
-    border-radius: 50px;
-    color: rgb(221, 215, 195);
-    cursor: pointer;
-    flex: 0.5;
-    margin: 10px;
-    position: relative;
-    transition: flex 0.7s ease-in;
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: rgb(221, 215, 195);
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+  /* add shadow boxes around panels*/
 }
 
 .panel h3 {
-    font-size: 20px;
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    margin: 0;
-    opacity: 0;
-
+  font-size: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
 }
 
 .panel.active {
   flex: 20;
-
 }
 
 .panel.active h3 {
-    opacity:1 ;
-    transition: opactity 0.3s ease-in 0.4s;
+  opacity: 1;
+  transition: opactity 0.3s ease-in 0.4s;
 }
 
 @media (max-width: 480px) {
-    .container {
-        width: 100vw;
-    }
+  .container {
+    width: 100vw;
+  }
 
-    .panel:nth-of-type(4),
-    .panel:nth-of-type(5) {
-        display: none;
-    }
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
 }
