@@ -1,10 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Monoton&family=Shadows+Into+Light&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap');
 
 :root {
   /* background-color: rgb(105, 163, 186); */
-  font-family: "Amatic SC", cursive;
-  font-family: "Monoton", cursive;
-  font-family: "Shadows Into Light", cursive;
+  font-family: 'Roboto Mono', monospace;
   background-image: url(https://media1.giphy.com/media/3og0INtldac8gncQO4/giphy.gif?cid=ecf05e47ey0wk4iw36n0nt185g5ni36cs1gp7bjzsvoorac8&rid=giphy.gif&ct=g);
   background-size: 100%;
   color: aliceblue;
@@ -15,14 +13,33 @@
 
 #nav ul  {
   display: flex;
+  align-items: center;
   flex-direction: row;
   list-style:none;
   justify-content:space-evenly;
-  font-size: x-large;
-    
+  font-size: xx-large;
+  background-color: rgba(0, 0, 0, 0.485);
+  width: 100vw;
+  height: 70px;
+  margin: auto;
+
 }
  #nav ul a {
-  color:aliceblue
+  color:aliceblue;
+  text-decoration:none ;
+ }
+#nav a {
+  box-shadow: inset 0 0 0 0 #dab0cf;
+  margin: 0 -.25rem; 
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .5s ease-in-out;
+}
+
+ #nav a:hover {
+  cursor: pointer;
+  height: 100px;
+  box-shadow:inset 300px 0 0 0 #cd97bf;
+  color: white;
  }
 
 .mainContainer.show-nav {
@@ -45,6 +62,17 @@ body {
   width: 100vw;
   height: 90vh;
 }
+#bodyContainer {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+#bodyContainer h1 {
+display: block;
+margin: auto;
+position: absolute;
+}
 
 .container {
   display: flex;
@@ -55,14 +83,23 @@ body {
 
 h1 {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  margin: auto;
+  text-align: center;
   align-items: center;
-  justify-content: left;
+  justify-items: center;
   font-size: 3em;
   font-weight: 550;
   padding: 20px;
   margin: 0 20px;
+}
+
+p {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+
 }
 .panel {
   background-size: auto 100%;
